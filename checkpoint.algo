@@ -1,0 +1,22 @@
+ALGORITHM checkpoint 2 
+VAR
+    array1 : ARRAY_OF INTEGER[4] := [3, 1, 7, 9];
+    array2 : ARRAY_OF INTEGER[5] := [2, 4, 1, 9, 3];
+    array3 : ARRAY_OF INTEGER[10];
+    i,j : INTEGER
+    sum : INTEGER := 0
+BEGIN
+    array3 := array1.concat(array2);
+FOR i FROM 0 TO array3.length STEP 1 DO
+    FOR j FROM i+1 TO array3.length STEP 1  DO
+       IF (array3[i] === array3[j]) THEN
+        break
+       END_IF
+IF (i = array3.length - 1) THEN
+    sum = sum + array3[i]
+END_IF
+    END_FOR  
+END_FOR
+    write(sum)
+END
+
