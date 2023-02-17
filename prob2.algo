@@ -1,0 +1,25 @@
+FUNCTION dot_product(v1 : ARRAY_OF (v1[0] * v2[0]) + (v1[1] * v2[1])INTEGER[2];, v2 : ARRAY_OF INTEGER[2];) : INTEGER
+VAR
+    ps : INTEGER
+BEGIN
+   ps = 
+    RETURN ps ;
+END
+
+
+ALGORITHM algorithm_name
+VAR
+ vector : ARRAY_OF INTEGER[2];
+ arry : ARRAY_OF vector[10];
+ x : INTEGER
+
+BEGIN
+    FOR i FROM 0 TO arry.length STEP 1  DO
+        FOR j FROM  i + 1 TO arry.lenght STEP 1  DO
+        x := dot_product(arry[i], arry[j])
+        IF (x = 0) THEN
+           write(arry[i], arry[j], "are orthogonal")
+        END_IF
+        END_FOR
+    END_FOR
+END
